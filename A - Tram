@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+   int n;
+   cin>>n;
+   int x,y;
+   cin>>x>>y;
+   int sum=y;
+   vector<int>v;
+   v.push_back(sum);
+
+   for(int i=1;i<n;i++){
+
+    int a,b;
+    cin>>a>>b;
+    int sum2=abs(sum-a);
+    sum=sum2+b;
+    v.push_back(sum);
+
+   }
+   sort(v.rbegin(),v.rend());
+   cout<<v[0]<<endl;
+
+   
+    return 0;
+}
