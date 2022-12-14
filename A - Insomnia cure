@@ -1,0 +1,45 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define fo(i,a,n) for(ll i=a;i<n;i++)
+#define all(v) (v).begin(),(v).end()
+
+#define pb push_back
+#define endl '\n'
+
+int main()
+{
+
+    ios_base::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    int k,l,m,n;
+    ll d;
+    cin>>k>>l>>m>>n>>d;
+    set<ll>s;
+    ll sk=k,sl=l,sm=m,sn=n;
+    while(sk<=d)
+    {
+        s.insert(sk);
+        sk+=k;
+
+    }
+    while(sl<=d)
+    {
+        s.insert(sl);
+        sl+=l;
+    }
+    while(sm<=d)
+    {
+        s.insert(sm);
+        sm+=m;
+    }
+    while(sn<=d)
+    {
+        s.insert(sn);
+        sn+=n;
+    }
+    cout<<(s.size())<<endl;
+
+    return 0;
+}
