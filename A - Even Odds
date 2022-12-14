@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    
+        long long n,m;
+        cin>>n>>m;
+        long long sum=n/2;
+        if(n%2==0)
+        {
+            if(m<=sum) {
+                long long s=(m*2)-1;
+                cout<<s<<endl;
+            }
+            else {
+            long long s2=m-sum;
+
+
+
+                cout<<s2*2<<endl;
+            }
+        }
+        else {
+            if(m<=sum+1) {
+                long long  s3=(m*2)-1;
+                    cout<<s3<<endl;
+            }
+            else {
+            long long s4=m-(sum+1);
+            cout<<s4*2<<endl;}
+        }
+    
+
+    return 0;
+}
