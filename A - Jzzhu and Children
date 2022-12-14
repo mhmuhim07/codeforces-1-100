@@ -1,0 +1,57 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define fo(i,a,n) for(ll i=a;i<n;i++)
+#define all(v) (v).begin(),(v).end()
+#define test int t; cin>>t; for(int no = 1;no<=t;no++)
+#define pb push_back
+#define endl '\n'
+#define ff first
+#define ss second
+#define fast ios_base::sync_with_stdio(false);cin.tie(0),cout.tie(0);
+void solve()
+{
+    int n,m;
+    cin>>n>>m;
+    vector<pair<int,int>>v;
+    for(int i=1; i<=n; i++) {
+        int x;
+        cin>>x;
+        v.pb({x,i});
+    }
+    while(v.size()>1) {
+
+
+        int k=0;
+        k=v[0].ff;
+        if(k>m) {
+            int s = k-m;
+            int z = v[0].ss;
+            v.pb({s,z});
+            v.erase(v.begin());
+        }
+        else {
+            v.erase(v.begin());
+
+        }
+
+
+    }
+    cout<<v[0].ss<<endl;
+
+}
+int main()
+{
+
+    fast;
+
+    int t=1;
+    //cin >> t;
+    while(t--)
+    {
+        solve();
+    }
+
+    return 0;
+}
+
