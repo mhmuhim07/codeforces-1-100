@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define fo(i,a,n) for(ll i=a;i<n;i++)
+#define all(v) (v).begin(),(v).end()
+
+#define pb push_back
+#define endl '\n'
+bool isPrime(int x)
+{
+    if (x <= 1)
+        return false;
+ 
+    for (int i = 2; i < x; i++)
+        if (x % i == 0)
+            return false;
+ 
+    return true;
+}
+
+int main() {
+
+    ios_base::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+
+    int t=1;
+    //cin >> t;
+    while(t--){
+        int n,m;
+        cin>>n>>m;
+        int prime =0;
+        while(n++&&n!=0){
+            if(isPrime(n)){
+                prime = n;
+                n=0;
+            }
+
+        }
+        if(prime==m) cout<<"YES"<<endl;
+        else cout<<"NO"<<endl;
+
+    }
+  
+    return 0;
+}
