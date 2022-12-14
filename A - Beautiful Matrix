@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define fo(i,a,n) for(ll i=a;i<n;i++)
+#define all(v) (v).begin(),(v).end()
+
+#define pb push_back
+#define endl '\n'
+
+int main() {
+
+    ios_base::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    int a[5][5];
+    for(int i =0 ;i<5;i++){
+        for(int j = 0;j<5;j++) cin>>a[i][j];
+    }
+    int indexi=0,indexj=0;
+     for(int i =0 ;i<5;i++){
+        for(int j = 0;j<5;j++) {
+            if(a[i][j]==1){
+                indexi=i;
+                indexj=j;
+                break;
+            }
+        }
+    }
+    int sum1= abs(2-indexi );
+    int sum2= abs(2-indexj );
+    cout<<sum1+sum2<<endl;
+
+    return 0;
+}
