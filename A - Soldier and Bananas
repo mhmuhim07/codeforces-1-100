@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int k,n,w,i,d=0;
+    cin>>k>>n>>w;
+    for(i=1;i<=w;i++){
+        d = d+(i*k);
+    }
+    if(d<n){
+        cout<<"0"<<endl;
+    }
+    else
+        cout<<d-n<<endl;
+return 0;
+}
