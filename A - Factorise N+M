@@ -1,0 +1,51 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define fo(i,a,n) for(ll i=a;i<n;i++)
+#define all(v) (v).begin(),(v).end()
+#define test int t; cin>>t; for(int no = 1;no<=t;no++)
+#define pb push_back
+#define endl '\n'
+#define ff first
+#define ss second
+#define fast ios_base::sync_with_stdio(false);cin.tie(0),cout.tie(0);
+int isprime(int x, int y) {
+    int s = x+y;
+    if(s%2==0) return y;
+    else {
+        for(int i =3; i<=sqrt(s); i++)
+            if(s%i==0) return y;
+        return 1;
+
+    }
+
+}
+void solve()
+{
+    vector<int>v= {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97,101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199};
+    int n;
+    cin>>n;
+    fo(i,0,v.size()) {
+        int z = isprime(n,v[i]);
+        if(z!=1) {
+            cout<<z<<endl;
+            break;
+        }
+    }
+
+
+}
+int main()
+{
+
+    fast;
+
+    int t=1;
+    cin >> t;
+    while(t--)
+    {
+        solve();
+    }
+
+    return 0;
+}
