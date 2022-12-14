@@ -1,0 +1,71 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define fo(i,a,n) for(ll i=a;i<n;i++)
+#define all(v) (v).begin(),(v).end()
+
+#define pb push_back
+#define endl '\n'
+#define test int t; cin>>t; while(t--)
+
+int main()
+{
+
+    ios_base::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    test
+    {
+        string s;
+        cin>>s;
+        int  n = s.size();
+        bool f =1;
+        if(n==1)
+        {
+            if(s[0]=='Y'||s[0]=='e'||s[0]=='s') cout<<"Yes"<<endl;
+            else cout<<"No"<<endl;
+
+        }
+        else
+            {
+                fo(i,0,n-1)
+                {
+                    if(s[i]=='Y')
+                    {
+                        if(s[i+1]!='e')
+                        {
+                            f=0;
+                            break;
+                        }
+                    }
+                    else if(s[i]=='e')
+                    {
+                        if(s[i+1]!='s')
+                        {
+                            f=0;
+                            break;
+                        }
+                    }
+                    else if(s[i]=='s')
+                    {
+                        if(s[i+1]!='Y')
+                        {
+                            f=0;
+                            break;
+                        }
+                    }
+                    else {
+                        f=0;
+                        break;
+                    }
+                }
+                if(f==1)cout<<"Yes"<<endl;
+                else cout<<"No"<<endl;
+
+            }
+
+
+    }
+
+    return 0;
+}
