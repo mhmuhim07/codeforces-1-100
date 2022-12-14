@@ -1,0 +1,49 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define fo(i,a,n) for(ll i=a;i<n;i++)
+#define all(v) (v).begin(),(v).end()
+#define test int t; cin>>t; for(int no = 1;no<=t;no++)
+#define pb push_back
+#define endl '\n'
+#define ff first
+#define ss second
+#define fast ios_base::sync_with_stdio(false);cin.tie(0),cout.tie(0);
+void solve()
+{
+
+    ll n;
+    cin>>n;
+    //vector<int>v;
+    if(n==1||n==2) cout<<"No"<<endl;
+    else if(n%2==1) cout<<"Yes"<<endl;
+    else if(n%2==0){
+        while(n>=2){
+                int s = n%2;
+                if(s==1){
+                    cout<<"Yes"<<endl;
+                    break;
+                }
+                n=n/2;
+        }
+
+        if(n==1) cout<<"No"<<endl;
+        //else if(n==1) cout<<"Yes"<<endl;
+    }
+
+}
+int main()
+{
+
+    fast;
+
+    int t=1;
+    cin >> t;
+    while(t--)
+    {
+        solve();
+    }
+
+    return 0;
+}
+
