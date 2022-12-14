@@ -1,0 +1,43 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define fo(i,a,n) for(ll i=a;i<n;i++)
+#define all(v) (v).begin(),(v).end()
+#define test int t; cin>>t; for(int no = 1;no<=t;no++)
+#define pb push_back
+#define endl '\n'
+#define ff first
+#define ss second
+#define fast ios_base::sync_with_stdio(false);cin.tie(0),cout.tie(0);
+int findi(int x,int *v)
+{
+   for(int i=0;i<7;i++){
+    x-=v[i];
+    if(x<=0)return i;
+   }
+   if(x>0) return findi(x,v);
+}
+void solve()
+{
+    int n;
+    cin>>n;
+    int v[7];
+    fo(i,0,7)cin>>v[i];
+   int ans= findi(n,v);
+   cout<<ans+1;
+}
+int main()
+{
+
+    fast;
+
+    int t=1;
+    //cin >> t;
+    while(t--)
+    {
+        solve();
+    }
+
+    return 0;
+}
