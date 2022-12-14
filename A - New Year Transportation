@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define fo(i,a,n) for(ll i=a;i<n;i++)
+#define all(v) (v).begin(),(v).end()
+
+#define pb push_back
+#define endl '\n'
+
+const int N = 1e5;
+bool vis[N];
+
+
+void solve(int cs){
+
+    int n,k;
+    cin >> n >> k;
+    int arr[n-1];
+    fo(i,0,n-1){
+        cin >> arr[i];
+    }
+    int j = 1;
+    while(j<=k){
+        vis[j] = true;
+        j+=arr[j-1];
+    }
+    if(vis[k]) cout << "YES" << endl;
+    else cout << "NO" << endl;
+
+}
+
+
+
+int main() {
+
+    ios_base::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+
+    int t=1,cs=1;
+    // cin >> t;
+    while(t--){
+        solve(cs++);
+    }
+  
+    return 0;
+}
