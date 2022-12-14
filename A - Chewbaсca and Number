@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define fo(i,a,n) for(ll i=a;i<n;i++)
+#define all(v) (v).begin(),(v).end()
+#define test int t; cin>>t; for(int no = 1;no<=t;no++)
+#define pb push_back
+#define endl '\n'
+#define ff first
+#define ss second
+#define fast ios_base::sync_with_stdio(false);cin.tie(0),cout.tie(0);
+void solve()
+{
+    ll n;
+    cin>>n;
+    vector<int>v;
+    while(n>0) {
+        int x = n%10;
+        n/=10;
+        v.pb(x);
+    }
+    int s=  v.size();
+    reverse(all(v));
+    int tmp =v[0];
+    fo(i,0,s){
+    int r = 9-v[i];
+    if(r<v[i]) v[i]=r;
+    }
+    if(v[0]==0) v[0]=tmp;
+    for(auto u:v) cout<<u;
+    cout<<endl;
+
+}
+int main()
+{
+
+    fast;
+
+    int t=1;
+    //cin >> t;
+    while(t--)
+    {
+        solve();
+    }
+
+    return 0;
+}
+
