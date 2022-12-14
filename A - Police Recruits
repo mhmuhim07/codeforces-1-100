@@ -1,0 +1,49 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define fo(i,a,n) for(ll i=a;i<n;i++)
+#define all(v) (v).begin(),(v).end()
+
+#define pb push_back
+#define endl '\n'
+
+int main()
+{
+
+    ios_base::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+
+    int t=1;
+    //cin >> t;
+    while(t--)
+    {
+        ll n;
+        cin>>n;
+        ll a[n];
+        int p=0,c=0;
+        fo(i,0,n)cin>>a[i];
+        fo(i,0,n)
+        {
+            if(a[i]!= -1)
+            {
+                p+=a[i];
+            }
+            else
+            {
+                if(p==0)
+                {
+                    c++;
+                }
+                else
+                {
+                    p=p+a[i];
+                }
+
+            }
+        }
+        cout<<c<<endl;
+    }
+
+    return 0;
+}
